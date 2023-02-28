@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript">
+	function chk() {
+		// 비어있으면 		--> 숫자 입력 + focus
+		// 문자로 들어오면 	--> 숫자가 아님 헐 + focus + 입력된 글자 지우기
+		if (!frm.num.value) {
+			alert("숫자 입력?");
+			frm.num.focus();
+			return false;
+		} 
+		if(isNaN(frm.num.value)) {
+			alert("숫자가 아님 헐 ?");
+			frm.num.focus();
+			frm.num.value = ""; //입력된 글자 지우기
+			return false;
+		} 
+		return true;
+		
+		
+	}
+</script>
+<body>
+	<h1>숫자를 입력하세요(1부터 num까지의 합계)</h1>
+	<!-- 아무것도 안써주면 디폴트로 get방식 method="get"  -->
+	<form action="Add3" name="frm"  onsubmit="return chk()">
+		숫자 : <input type="text" name="num"><p>
+		위치 : <input type="text" name="loc"><p>
+		<input type="submit" value="확인">
+	</form>
+</body>
+</html>

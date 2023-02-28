@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function chk() {
+		var mStr = "좋아하는 영화는 ? \n";
+		//좋아하는 영화가 조회되도록 alert창
+		for(var i = 0; i < frm.movie.length; i++) {
+			 if(frm.movie[i].checked) mStr += frm.movie[i].value+"\n";
+		 }
+		alert(mStr);
+	}
+</script>
+</head>
+<body>
+	<form action="" name="frm">
+		<h2>다음에서 선택</h2>
+		1. 가장 좋아하는 영화 한 개만을 선택<br>
+		<input type="radio" name="movie" value="영웅" id="m1">
+		영웅
+		<input type="radio" name="movie" value="아바타" id="m2">
+		<label for="m2">아바타</label>
+		<input type="radio" name="movie" value="바빌론" id="m3">
+		<label for="m3">바빌론</label>
+		<hr>
+		<input type="button" value="확인" onclick="chk()">
+	</form>
+</body>
+</html>

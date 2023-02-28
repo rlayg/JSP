@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HW1</title>
+<script type="text/javascript">
+		// HW1
+		// 1. name 입력 없으면 -> 이름 입력? , name Focus
+		// 2. age 입력 없으면  -> age 입력? , age Focus
+		//        문자면      -> 나이가 문자임 , age Focus 
+		// 3. addr 입력 없으면 -> addr 입력? , addr Focus
+		function chk() {
+			if (frm.name.value== "") {
+				alert("이름 입력?");
+				frm.name.focus();
+				return;
+			}
+			//focus는 커서가 그 위치로 이동하는거
+			
+		
+			if (frm.age.value == "") {
+				alert("age 입력? : " + frm.age.value.length);
+				frm.age.focus();
+				return;
+			} else if(isNaN(frm.age.value)) {
+				alert("나이가 문자임?");
+				frm.age.focus();
+				return;
+			} else if(frm.age.value < 0) {
+				alert("음수?");
+				frm.age.focus();
+				return;
+			}
+	
+			
+			if (frm.addr.value=="") {
+				alert("addr 입력?");
+				frm.addr.focus();
+				return;
+			}
+			/*
+			선생님이 한거
+			if (!frm.age.value){
+				alert("age 입력?");
+				frm.age.focus();
+				return
+			}
+			if(isNaN(frm.age.value)) {
+				alert("나이가 문자임?");
+				frm.age.focus();
+				frm.age.value = "";
+				return;
+			}
+			*/
+		}
+		
+</script>
+</head>
+<body>
+	<h2> 입력창 </h2>
+	<form action="" name="frm">
+		이름 : <input type="text" name="name"><p>
+		나이 : <input type="text" name="age"><p>
+		주소 : <input type="text" name="addr" id="addr"><p>
+		
+		<input type="button" value="확인" onclick="chk()"><p>
+	</form>
+</body>
+</html>

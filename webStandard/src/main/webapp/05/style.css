@@ -1,0 +1,8 @@
+/* external의 css. css모듈화 css만 모아둠 */
+	ul {
+		list-style-type: square;
+		/* circle도 있어 원형 */
+		color: blue;
+	}
+
+

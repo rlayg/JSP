@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var a = parseInt(prompt("1~7사이 숫자를 입력하세요", ""));
+	if(a<1 || a>7) {
+		document.write("잘못 입력하셨습니다");
+	} else if(isNaN(a)){
+		document.write("숫자가 아닙니다");
+	} else
+		switch (a) {
+			case 1:
+				document.write("1 입력하셨습니다 ".fontcolor("red"));
+				break;
+			case 2:
+				document.write("2 입력하셨습니다 ".fontcolor("orange"));
+				break;
+			case 3:
+				document.write("3 입력하셨습니다 ".fontcolor("yellow"));
+				break;
+			case 4:
+				document.write("4 입력하셨습니다 ".fontcolor("green"));
+				break;
+			case 5:
+				document.write("5 입력하셨습니다 ".fontcolor("blue"));
+				break;
+			case 6:
+				document.write("6 입력하셨습니다 ".fontcolor("navy"));
+				break;
+			default :
+				document.write("7 입력하셨습니다 ".fontcolor("violet"));
+				break;
+		}
+	
+</script>
+</head>
+<body>
+	<h1>Switch01</h1>
+	<h1>Switch</h1>
+    <h4>1~7사이 숫자를 입력하세요</h4>
+    <h4>1~7사이 아니면 ->잘못 입력하셨습니다 </h4>
+    <h4>isNaN면     ->숫자가 아닙니다    </h4>
+    <h4>1~7    사이면 ->Switch </h4>
+    <h6>1면 ->1 입력하셨습니다 , 색상 red </h6>
+    <h6>2면 ->2 입력하셨습니다 , 색상 orange </h6>
+    <h6>3면 ->3 입력하셨습니다 , 색상 yellow </h6>
+    <h6>4면 ->4 입력하셨습니다 , 색상 green </h6>
+    <h6>5면 ->5 입력하셨습니다 , 색상 blue </h6>
+    <h6>6면 ->6 입력하셨습니다 , 색상 navy </h6>
+    <h6>default면 ->7 입력하셨습니다 , 색상 violet </h6>
+</body>
+</html>

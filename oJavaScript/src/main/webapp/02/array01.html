@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var a = new Array(4);
+	document.write("a.length 1 = " + a.length + "<br>");
+	a[0] = 12;
+	a[1] = 54;
+	a[2] = 2;
+	a[3] = 78;
+	a[4] = 8;
+	a[5] = 17;
+	document.write("a.length 2 = " + a.length + "<br>");
+	/* JS세계에서는 처음 var a = new Array(4) 이렇게 값을 4 잡아준게 의미가 없다
+	계속 넣으면 넣는대로 들어간다 */
+	for (var i = 0; i<a.length; i++) {
+		document.write("<br>a["+i+"] = " + a[i]);
+	}
+</script>
+</head>
+<body>
+	<h1>array01</h1>
+</body>
+</html>

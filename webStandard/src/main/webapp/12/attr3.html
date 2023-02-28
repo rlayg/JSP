@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	ul {
+		list-style: none;
+	}
+	li {
+		display: inline;
+		float: left;
+		margin: 10px;
+	}
+	li a {
+		padding: 5px 20px;
+		font-size: 14px;
+		color: blue;
+		text-decoration: none;
+	}
+	.flat {
+		background: blue;
+		color: white;
+	}
+	/* "flat button" 가 있으면 "flat button" 전체가 클래스가 아니라
+	스페이스가 있으면 flat button 각각이 클래스 flat 클래스 button 클래스 */ 
+	[class ~="button"] { /* button이 들어가있는 클래스 다 */
+		border: 2px solid black;
+		box-shadow: rgba(0,0,0,0.4) 5px 5px;
+	}  /* 위드스 헤이트가 각각 5픽셀 */ 
+	
+</style>
+</head>
+<body>
+	<ul>
+		<li><a href="#">메뉴 1</a></li>
+		<li><a href="#">메뉴 2</a></li>
+		<li><a href="#" class="button">메뉴 3</a></li>
+		<li><a href="#" class="flat button" >메뉴 4</a></li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	ul{
+		list-style: none; 
+		/* 점을 없애고 싶을때 */
+	}
+	li {
+		margin: 10px 20px 30px 40px; 
+		/* 
+		1개주면 상하좌우 다 같은 값
+		2개주면 상하 좌우
+		3개주면 상 좌우 하
+		4개주면상우하좌 
+		고스톱 순서래
+		*/
+	}
+	label {
+		width: 120px;
+		text-align: left;
+		/* 글자를 왼쪽부터 채워서/붙여서 하겟다 */
+		float: left;
+	}
+</style>
+</head>
+<body>
+	<h1>회원 가입 환영</h1>
+	<form action="">
+		<ul>
+			<li>
+				<label>아이디: </label>
+				<input type="text" id="user_id" size="10" minlength="4" maxlength="15">
+				<small style="color:red;">4~15자리 이내의 영문과 숫자</small>
+			</li>
+			<li>
+				<label>이메일: </label>
+				<input type="email" id="user_email">
+			</li>
+			<li>
+				<label>비밀번호: </label>
+				<input type="password" id="user_pwd">
+			</li>
+			<li>
+				<label>비밀번호 확인: </label>
+				<input type="password" id="user_pwd">
+			</li>
+			<li>
+				<input type="submit" value="회원가입">
+			</li>
+		</ul>
+	</form>
+</body>
+</html>

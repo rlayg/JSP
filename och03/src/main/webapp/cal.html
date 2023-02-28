@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function chk() {
+		// num1 "" -> 첫번째 수 ? + focus
+		// num1 문자 -> 그게 숫자냐1 ? + focus
+		// num2 "" -> 두번째 수 ? + focus
+		// num2 문자 -> 그게 숫자냐2 ? + focus
+		if(!frm.num1.value) {
+			alert("첫번째 수 ?");
+			frm.num1.focus();
+			return false;
+		}
+		if(isNaN(frm.num1.value)){
+			alert("그게 숫자냐1 ?");
+			frm.num1.focus();
+			frm.num1.value = "";    //입력한 값 초기화 해주는거
+			return false;
+		}
+		if(!frm.num2.value) {
+			alert("두번째 수 ?");
+			frm.num2.focus();
+			return false;
+		}
+		if(isNaN(frm.num2.value)){
+			alert("그게 숫자냐2 ?");
+			frm.num2.focus();
+			frm.num2.value = "";    //입력한 값 초기화 해주는거
+			return false;
+		}
+	}
+</script>
+</head>
+<body>
+	<h2>사칙연산할 데이터 입력</h2>
+	<form action="cal.jsp" name="frm" onsubmit="return chk()">
+		첫번째 수 : <input type="text" name="num1"><p>
+		두번째 수 : <input type="text" name="num2"><p>
+		<input type="submit" value="확인">
+	</form>
+</body>
+</html>

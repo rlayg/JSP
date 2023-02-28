@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	div {
+		width: 500px;
+		height: 500px;
+		border: 2px double black;
+		margin-bottom: 2px;
+	}
+	.bg1 {
+		background: url('images/bg4.jpg') no-repeat left top;
+		background-size: auto;
+	}
+	.bg2 {
+		background: url('images/bg4.jpg') no-repeat left top;
+		background-size: 200px 150px;
+	}
+	.bg3 {
+		background: url('images/bg4.jpg') no-repeat left top;
+		background-size: 60% 40%;
+	}
+	.bg4 {
+		background: url('images/bg4.jpg') no-repeat left top;
+		background-size: contain;
+		/* 비율때문에 끝까지 안나온거지 거의 박스에 맞게 나온데 */
+	}
+	.bg5 {
+		background: url('images/bg4.jpg') no-repeat left top;
+		background-size: cover;
+		/* 이미지는 짤렷지만 박스는 다 채웟다 */
+	}
+	.bg6 {
+		background: url('images/bg4.jpg') no-repeat left top;
+		background-size: 100% 100%;
+		/* 억지로 뭉쳐놔서 화질은 좀 뭉개질 수 있다 */
+	}
+</style>
+</head>
+<body>
+	<div class="bg1"></div>
+	<div class="bg2"></div>
+	<div class="bg3"></div>
+	<div class="bg4"></div>
+	<div class="bg5"></div>
+	<div class="bg6"></div>	
+</body>
+</html>

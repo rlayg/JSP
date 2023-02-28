@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+// HW 2-1
+//num1 없으면 -> 첫번째 숫자 입력 하세요 ? + focus
+// num1 문자면 -> 숫자1가 뭔지 몰라요! 헐 ?  + focus
+// num2 없으면 -> 두번째 숫자 입력 하세요 ? + focus
+// num2 문자면 -> 숫자2가 뭔지 몰라요! 헐 ?  + focus
+		function chk() {
+			if (!frm.num1.value) {
+				alert("첫번째 숫자 입력 하세요 ?");
+				frm.num1.focus();
+				return false;
+			}
+			if (isNaN(frm.num1.value)) {
+				alert("숫자1가 뭔지 몰라요! 헐 ?");
+				frm.num1.focus();
+				frm.num1.value = "";    //입력한 값 초기화 해주는거
+				return false;
+			}
+			if (!frm.num2.value) {
+				alert("첫번째 숫자 입력 하세요 ?");
+				frm.num2.focus();
+				return false;
+			}
+			if (isNaN(frm.num2.value)) {
+				alert("숫자1가 뭔지 몰라요! 헐 ?");
+				frm.num2.focus();
+				frm.num2.value = "";
+				return false;
+			}
+			
+			return true;	
+		}	
+</script>
+</head>
+<body>
+	<h1>연산할 두 숫자를 입력하세요</h1>
+	<!-- 로직만 정확하게, numOperator라도 action="Num" 이렇게 넣을 수 있어 -->
+	<form action="Num" name="frm" onsubmit="return chk()" method="post">
+		첫번째 숫자 : <input type="text" name="num1"><p>
+		두번째 숫자 : <input type="text" name="num2"><p>
+		<input type="submit" value="확인">
+	</form>
+</body>
+</html>

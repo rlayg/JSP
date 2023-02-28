@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function chk() {
+		// name --> 이름 ? + focus
+		// id --> 아이디 ? + focus
+		// password --> 암호 ? + focus
+		// notice 하나도 선택 안했을때 --> 메일수신 하나도 없어
+		if (!frm.name.value) {
+			alert("이름 ? ");
+			frm.name.focus();
+			return false;
+		}
+		if (!frm.id.value) {
+			alert("아이디 ? ");
+			frm.id.focus();
+			return false;
+		}
+		if (!frm.password.value) {
+			alert("암호 ? ");
+			frm.password.focus();
+			return false;
+		}
+		/*
+		if (!frm.notice.chk) {
+			alert("메일수신 하나도 없어 ");
+			return false;
+		}
+		*/
+		
+		var chkbox = document.getElementsByName('notice');
+		var chk = false;
+		
+		for(var i = 0; i < chkbox.length; i++) {
+			if(chkbox[i].checked) {
+				chk = true;
+				break;
+			} else {
+				chk = false;
+			}
+		}
+		if(chk) {
+			return true;
+		} else {
+			alert("메일수신 하나도 없어");
+			return false;
+		}
+		/*기본이 return true; 안써도 된다*/
+		return true;
+	}
+</script>
+</head>
+<body>
+	<h2>개인정보 ***</h2>
+	<form action="Person" method="post" name="frm" onsubmit="return chk()"> 
+		<table border="1" bgcolor="yellow">
+			<tr>
+				<td>이름</td>
+				<td><input type="text" name="name"></td>
+			</tr>
+			<tr>
+				<td>아이디</td>
+				<td><input type="text" name="id"></td>
+			</tr>
+			<tr>
+				<td>암호</td>
+				<td><input type="password" name="password"></td>
+			</tr>
+			<tr>
+				<td>성별</td>
+				<td>
+					남자
+					<input type="radio" value="남자" name="gender" checked="checked"><br>
+					여자
+					<input type="radio" value="여자" name="gender">
+				</td>
+			</tr>
+			<tr>
+				<td>메일수신</td>
+				<td>
+					<label for="m1">공지</label>
+					<input type="checkbox" name="notice" id="m1" value="공지"><br>
+					<label for="m2">광고</label>
+					<input type="checkbox" name="notice" id="m2" value="광고" checked="checked"><br>
+					<label for="m3">배송</label>
+					<input type="checkbox" name="notice" id="m3" value="배송"><br>
+				</td>
+			</tr>
+			<tr>
+				<td>직업</td>
+				<td>
+					<select name="job">
+						<option value="가수" selected = "selected">가수</option>
+						<option value="장군">장군</option>
+						<option value="공무원">가수</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="확인"></td>
+				<td><input type="reset" value="입력취소"></td>	
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

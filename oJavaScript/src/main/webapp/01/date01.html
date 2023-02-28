@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var date1 = new Date();
+	// 기본 -> 현재일자 시간
+	document.write(date1+"<p>");
+	//아무것도 안주면 현재시간 줌
+	var date2 = new Date("2023-02-22T13:30:00"); //날짜와 시간까지 표현함
+	var date3 = new Date("2023-02-22");	//시간이 생략되면 자동으로 09:00:00으로 설정
+	var date4 = new Date("2023-02"); //월만 셋팅하면/일이 생략되면 자동으로 1일로 설정
+	var date5 = new Date("2023");	//연도만 셋팅하면/ 월이 생략되면 자동으로 1월로 설정 
+	document.write(date2+"<p>");
+	document.write(date3+"<p>");
+	document.write(date4+"<p>");
+	document.write(date5+"<p>");
+</script>
+</head>
+<body>
+	<h1>date01</h1>
+</body>
+</html>

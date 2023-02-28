@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	/* 
+	function chk(num) {
+		// images[0]의 숫자는 밑 center안의 1번이 0번 2번이 1번 
+		document.images[0].src = "../images/" + num + ".gif";
+	}
+	 */
+	function chk(num, tarketNum) {
+		document.images[tarketNum].src = "../images/" + num + ".gif";
+	}
+</script>
+</head>
+<body>
+	<h1>dom Image 바꾸기</h1>
+	<!-- 
+	<center>
+		<img alt="3" src="../images/3.gif"><p>
+		<img alt="4" src="../images/4.gif"><p>
+	</center>
+	<button onclick="chk(1)">목마</button>
+	 -->
+	
+	
+	<center>
+		<img alt="3" src="../images/3.gif"><p>
+		<img alt="4" src="../images/4.gif"><p>
+		<hr>
+		<button onclick="chk(1,0)">1목마</button>
+		<button onclick="chk(1,1)">2목마</button>
+		<hr>
+		<button onclick="chk(1,0)">1우체통</button>
+		<button onclick="chk(2,1)">2우체통</button>
+		<hr>
+		<button onclick="chk(3,0)">1불자동차</button>
+		<button onclick="chk(3,1)">2불자동차</button>
+	</center>
+	
+</body>
+</html>
