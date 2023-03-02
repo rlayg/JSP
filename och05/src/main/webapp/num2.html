@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function init() {
+		frm.num1.value = "100";
+		frm.num2.value = "5";
+		frm.num1.focus();
+	}
+</script>
+</head>
+<!-- onload="init()" 로드가 끝나면 init을 실행시켜주세요 -->
+<body onload="init()">
+	<h2>연산할 숫자 입력 jsp이용한 Error 처리</h2>
+	<!-- <form action="cal1.jsp" name="frm"> --> 	<!-- 가장 기본적인 오류처리방법 -->
+	<!-- <form action="cal2.jsp" name="frm"> --> 	<!-- 연산결과 오류시 error 페이지 이동 -->
+	<!-- <form action="cal3.jsp" name="frm"> --> 	<!-- Java Script 이용 처리 -->
+	<!-- <form action="cal4.jsp" name="frm"> -->	<!-- error 페이지 이동 지시자를 이용 -->
+	<form action="cal5.jsp" name="frm">	<!-- web.xml 이용 처리 -->
+		첫번째 숫자 : <input type="text" name="num1"><p>
+		두번째 숫자 : <input type="text" name="num2"><p>
+		<input type="submit" value="확인">
+	</form>
+</body>
+</html>
+
+
+
+
+
+
+

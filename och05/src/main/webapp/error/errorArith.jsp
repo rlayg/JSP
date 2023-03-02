@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" isErrorPage="true"%>
+    <% 
+    	response.setStatus(200); 
+    %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,9 +10,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%
-	//response는 내장객체
-	response.sendRedirect("http://www.naver.com");
-%>
+	<h1>0으로 나누면 되나?</h1>
 </body>
 </html>

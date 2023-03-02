@@ -8,8 +8,10 @@
 </head>
 <body>
 <%
-	//response는 내장객체
-	response.sendRedirect("http://www.naver.com");
+	String[] winner = {"홍길동", "강감찬", "대조영"};
+	request.setAttribute("winner", winner);
+	RequestDispatcher rd = request.getRequestDispatcher("winnerResult.jsp");
+	rd.forward(request, response);
 %>
 </body>
 </html>

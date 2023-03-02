@@ -6,10 +6,8 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<body>
-<%
-	//response는 내장객체
-	response.sendRedirect("http://www.naver.com");
-%>
+<body bgcolor="${param.color}">
+
+
 </body>
 </html>

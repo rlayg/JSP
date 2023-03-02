@@ -8,6 +8,7 @@
 </head>
 <body>
 <%
+//	*** 이건 많이 쓴대 , request.getContextPath() 이건 많이 쓴대
 	String protocol 	= request.getProtocol();
 	String server 		= request.getServerName();
 	int port 			= request.getServerPort();

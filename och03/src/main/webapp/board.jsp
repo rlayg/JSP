@@ -20,7 +20,7 @@
 		//-------        1. 파일저장       ------------
 		long fileName = date.getTime();
 		// getRealPath --> Tomcat Metadata로  File 저장
-		// 나중에 getRealPath 를 써서 서버(미들웨서,톰캣같은곳)에 배포를 해라
+		// 나중에 getRealPath 를 써서 서버(미들웨서,톰캣같은곳)에 배포를 해라 ****
 		String real = application.getRealPath("/WEB-INF/out/" + fileName + ".txt");
 		System.out.println("real -> " + real);
 		// File 저장할수 있는 객체 / File에 저장하기 위한 객체

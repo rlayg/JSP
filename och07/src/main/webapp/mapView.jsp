@@ -7,9 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%
-	//response는 내장객체
-	response.sendRedirect("http://www.naver.com");
-%>
+	${param.NAME }의 주소는? ${ADDRESS[param.NAME]}<p>
+	<%-- ${ADDRESS."나무나무꼬치" }<p> 한글은 오류발생 --%>
+	${ADDRESS["나무나무꼬치"] }<p>
+	${ADDRESS.JeesongPark }<p>
 </body>
 </html>

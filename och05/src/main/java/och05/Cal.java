@@ -31,7 +31,7 @@ public class Cal extends HttpServlet {
 		response.setContentType("text/html;charset=utf-8");
 		PrintWriter out = response.getWriter();
 		out.println("<html><body><h2>연산결과</h2>");
-		
+		//여기서 바로 예외처리 하는거                 -  num1.html 에서 사용
 		try {
 			int num1 = Integer.parseInt(request.getParameter("num1"));
 			int num2 = Integer.parseInt(request.getParameter("num2"));

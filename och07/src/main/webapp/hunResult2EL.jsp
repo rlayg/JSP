@@ -7,9 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%
-	//response는 내장객체
-	response.sendRedirect("http://www.naver.com");
-%>
+	<h2>부터 100까지의 합 (EL: expression language)- EL표기법 사용</h2>
+	${sum }<p>
 </body>
 </html>

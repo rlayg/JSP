@@ -7,9 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%
-	//response는 내장객체
-	response.sendRedirect("http://www.naver.com");
-%>
+	<h1>Web.xml Setting값 가져오기</h1>
+	${initParam.DBName1 }<p>
+	${initParam.DBName2 }
+	<!-- 
+		context의 의미란?
+		 
+	-->
 </body>
 </html>

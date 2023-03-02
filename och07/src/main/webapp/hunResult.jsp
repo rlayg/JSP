@@ -7,9 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%
-	//response는 내장객체
-	response.sendRedirect("http://www.naver.com");
-%>
+	<h2>1부터 100까지의 합 스트릿틀잇 + Expresstion</h2>
+	<%
+		// Parameter sum Get
+		String sum = request.getAttribute("sum").toString();
+	%>
+	
+	<%=sum %><p>
 </body>
 </html>
