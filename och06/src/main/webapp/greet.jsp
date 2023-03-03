@@ -10,6 +10,8 @@
 <title>Insert title here</title>
 </head>
 <body>
+
+<%-- init 과 destroy 는 <%!로 디클라레이션 사용, Get / POST 는 <% 스트립트릿 사용 --%>
 <%!
 /* %! 선언할 때 사용 약속이야 / 멤버변수 , init()*/
 	//선언 -- member변수

@@ -8,7 +8,10 @@
 </head>
 <body>
 	<h1>Form은 param받음</h1>
-		<!-- Form을 통해 입력된 데이터를 가져올 때 param. 사용, EL표기법으로 $ 사용-->
+		<!-- 
+			Form을 통해 입력된 데이터를 가져올 때 param. 사용, EL표기법으로 $ 사용
+			param 은 Parameter 약자	
+		-->
 		첫번째 동물 : ${param.an1}<br>
 		두번째 동물 : ${param.an2}<br>
 		같은  동물 : ${param.an1==param.an2 }<br>

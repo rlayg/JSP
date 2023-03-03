@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h2>부터 100까지의 합 (EL: expression language)- EL표기법 사용</h2>
+	<h2>1부터 100까지의 합 (EL: expression language)- EL표기법 사용</h2>
 	${sum }<p>
 </body>
 </html>
