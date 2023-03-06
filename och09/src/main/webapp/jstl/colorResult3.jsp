@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-	<!-- colorResult3 변수 선언 -->
+	<!-- colorResult3 변수 선언 -->  <!-- 복습하기 -->
 	<c:set var="color"	value="red, orange, yellow, green, blue, navy, violet"/>
 	<c:set var="num"	value="1-2-3-4-5-6-7"/>
 <body>
