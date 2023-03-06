@@ -8,7 +8,13 @@
 </head>
 <body>
 	<!-- emp Bean 선언 -->
+	<jsp:useBean id="emp" class="och08.emp" scope="request"/>
+	
 	<!-- Bean 값 가져오기 사번 / 이름 / 업무 / 급여 -->
 	<h2>HW1-3 직원정보</h2>
+	사번 : <jsp:getProperty property="empno" name="emp"/><p>
+	이름 : <jsp:getProperty property="ename" name="emp"/><p>
+	업무 : <jsp:getProperty property="job" name="emp"/><p>
+	급여 : <jsp:getProperty property="sal" name="emp"/><p>
 </body>
 </html>

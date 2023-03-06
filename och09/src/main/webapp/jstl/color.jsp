@@ -14,6 +14,6 @@
 		/* pageContext.setAttribute("color", color); */
 	%>
 	<%-- <jsp:forward page="colorResult.jsp"></jsp:forward> --%>
-	<jsp:forward page="colorResult2.jsp"></jsp:forward>
+	<jsp:forward page="colorResult3.jsp"></jsp:forward>
 </body>
 </html>

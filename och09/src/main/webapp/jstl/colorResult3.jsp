@@ -11,14 +11,14 @@
 	<c:set var="color"	value="red, orange, yellow, green, blue, navy, violet"/>
 	<c:set var="num"	value="1-2-3-4-5-6-7"/>
 <body>
-	<%-- 이거랑 비슷하게 나오게 
-	<c:forEach var="cnt" begin="1" end="7">
-		<c:forEach var="col" items="${color }">
-			<font color="${col }" size="${cnt }">야호</font>
-		</c:forEach>
-		<br>
-	</c:forEach>
-	 --%>
+ <%-- <c:forTokens> 쓰기 위해 원소를 구별할 수 있는 일정한 구분자 필요 --%>
+<c:forTokens var="cnt" items="${num }" delims="-">
+	<c:forTokens var="col" items="${color }" delims=",">
+		<font color="${col }" size="${cnt }">야호</font>
+	</c:forTokens>
+	<br>
+</c:forTokens>
+	
 	 
 	 
 </body>
