@@ -18,8 +18,8 @@
 		Ex 근무지 : <%=dept.getLoc() %><p>
 	
 	<h2>EL부서정보</h2>
-		EL 부서코드 : ${dept.deptno }<p>
-		EL 부서명 : ${dept.dname }<p>
+		EL 부서코드 : ${dept.getDeptno() }<p> <!-- 이렇게 써도 가능은 해 -->
+		EL 부서명 : ${dept.dname }<p> <!-- 그래도 이렇게 해  get..() 하지마 내부에서 getter 가져옴 -->
 		EL 근무지 : ${dept.loc }<p>
 	
 </body>

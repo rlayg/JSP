@@ -16,9 +16,10 @@
 	<!-- Java Source 에서 Emp.java 만든걸로 DTO 사용 -->
 	
 <%
+	//*******
 	String driver = "oracle.jdbc.driver.OracleDriver";
 	String url = "jdbc:oracle:thin:@127.0.0.1:1521:xe";
-	
+	// 데이터가 실질적으로 하나만 있더라도 멀티로우로 가져와 언제 데이터 추가될지몰라
 	String sql = "select empno, ename, job, sal from emp";
 	Class.forName(driver);
 	Connection conn = DriverManager.getConnection(url, "scott", "tiger");

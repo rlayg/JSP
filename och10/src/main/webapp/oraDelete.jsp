@@ -13,7 +13,7 @@
 	<h2>스크릿틀릿 + Statement 삭제</h2>
 <%
 	int deptno = Integer.parseInt(request.getParameter("deptno"));	
-
+//	String deptno = request.getParameter("deptno"); String으로 쓰고싶을때
 	String driver = "oracle.jdbc.driver.OracleDriver";
 	String url = "jdbc:oracle:thin:@127.0.0.1:1521:xe";
 	

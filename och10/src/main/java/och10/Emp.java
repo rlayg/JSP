@@ -1,12 +1,21 @@
 package och10;
 
+import java.util.Date;
+
 public class Emp {
 //	ora05.jsp에 사옹되는 DTO
 	private int empno;
 	private String ename;
 	private String job;
 	private int sal;
+	private Date hiredate;
 	
+	public Date getHiredate() {
+		return hiredate;
+	}
+	public void setHiredate(Date hiredate) {
+		this.hiredate = hiredate;
+	}
 	public int getEmpno() {
 		return empno;
 	}
