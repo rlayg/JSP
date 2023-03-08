@@ -22,7 +22,7 @@
 	int empno = Integer.parseInt(request.getParameter("empno"));
 	System.out.println("empno -> " + empno);
 	
-//	Procidure Call
+//	Procedure Call
 	String sql = "{call Emp_Info3(?,?)}";
 	CallableStatement cs = conn.prepareCall(sql);
 //	급여

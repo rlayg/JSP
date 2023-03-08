@@ -10,6 +10,7 @@
 </head>
 <body>
 <%
+
 	String	chk		=	"";
 	String	agree	=	request.getParameter("agree");
 	if(agree.equals("y")){
@@ -21,9 +22,9 @@
 		member.setId(id);
 		member.setName(name);
 		member.setPassword(password);
-//		int result = md.insert(member); //insert메소드를 dao에서 만드는게 과제
-//		if(result > 0 ) chk = "success";
-//		else chk = "fail";
+		int result = md.insert(member); //insert메소드를 dao에서 만드는게 과제
+		if(result > 0 ) chk = "success";
+		else chk = "fail";
 		
 	} else chk = "fail";
 	session.invalidate();

@@ -8,6 +8,7 @@
 <style type="text/css">
 	table {
 		background-color: pink;
+		
 	}
 	tr:hover {
 		background-color: yellow;	

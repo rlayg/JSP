@@ -13,8 +13,9 @@ public class MemberDao {
 	private Connection getConnection() throws NamingException {
 		Connection conn = null;
 		
-		Context ctx;
+		
 		try {
+			Context ctx;
 			ctx = new InitialContext();
 			DataSource ds = (DataSource)ctx.lookup("java:comp/env/jdbc/OracleDB"); //context.xml의 name:jdbc/OracleDB 가져온거
 			conn = ds.getConnection();
@@ -27,42 +28,51 @@ public class MemberDao {
 		return conn;
 	}
 	
-	public int insert(MemberDto member) {
-		int result = 0;
-		// 1. DBCP 이용
-		// 2. PreparedStatement 이용
-		// 3. Member1 진짜 Insert
-	    Connection conn = null;
-	    PreparedStatement pstmt = null;
-	    try {
-	        conn = getConnection();
-	        String sql = "INSERT INTO member1 (id, password, name) VALUES (?, ?, ?)";
-	        pstmt = conn.prepareStatement(sql);
-	        pstmt.setString(1, member.getId());
-	        pstmt.setString(2, member.getPassword());
-	        pstmt.setString(3, member.getName());
-	        result = pstmt.executeUpdate();
-	    } catch (SQLException e) {
-	        e.printStackTrace();
-	    } catch (NamingException e) {
-	        e.printStackTrace();
-	    } finally {
-	        if (pstmt != null) {
-	            try {
-	                pstmt.close();
-	            } catch (SQLException e) {
-	                e.printStackTrace();
-	            }
-	        }
-	        if (conn != null) {
-	            try {
-	                conn.close();
-	            } catch (SQLException e) {
-	                e.printStackTrace();
-	            }
-	        }
-	    }
+	public int insert(MemberDto member) throws SQLException {
 		
+		
+		Connection conn = null;
+		int result = 0;
+		PreparedStatement pstmt = null;
+		String sql = "INSERT INTO member1 VALUES (?, ?, ?, sysdate)"; //sysdate 날짜갑는 가장 기본적인 방법
+		try {
+			// 1. DBCP 이용
+			conn = getConnection();
+			// 2. PreparedStatement 이용
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setString(1, member.getId());  //DB서버에 저장된 값 가져옴 DTO 통해서
+			pstmt.setString(2, member.getPassword());
+			pstmt.setString(3, member.getName());
+		// 3. Member1 진짜 Insert
+			result = pstmt.executeUpdate();
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		} finally {
+			if (pstmt != null) pstmt.close();
+			if (conn != null) conn.close();
+		}
+		
+		
+		
+//	    Connection conn = null;
+//	    PreparedStatement pstmt = null;
+//	    try {
+//	        conn = getConnection();
+//	        String sql = "INSERT INTO member1 (id, password, name, ) VALUES (?, ?, ?)";
+//	        pstmt = conn.prepareStatement(sql);
+//	        pstmt.setString(1, member.getId());
+//	        pstmt.setString(2, member.getPassword());
+//	        pstmt.setString(3, member.getName());
+//	        result = pstmt.executeUpdate();
+//	    } catch (SQLException e) {
+//	        e.printStackTrace();
+//	    } catch (NamingException e) {
+//	        e.printStackTrace();
+//	    } finally {
+//	    	pstmt.close();
+//		    conn.close();
+//	    }
 		return result;
 	}
 }

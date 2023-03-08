@@ -11,9 +11,10 @@
 	String id		= request.getParameter("id");
 	String password	= request.getParameter("password");
 	String name		= request.getParameter("name");
-	session.setAttribute("id", id);
+	session.setAttribute("id", id);  //session 클라이언트와 서버의 연결을 유지하는데 사용 세션은 서버에 저장된다
 	session.setAttribute("password", password);
 	session.setAttribute("name", name);
+//	Attribute로 쓸수도 있고 session으로 쓸수 도 있어 근데 공유하고 프로젝트하는건 세션이 편하데
 %>
 	<h2>약관 동의</h2>
 	------------------------------------------------------------------------- <BR>
