@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CDN방식</title>
+<!-- CDN방식 방식 컨텐츠 딜리버리 네트웍 -->
+<!-- 직접 http로 걸 수 있어, jquery-latest 로 하면 그냥 최신버전으로 걸어줌 -->
+<!-- html01처럼 모듈 직접 안받아도 돼 문제는 네트워크 안되면 안돼 -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+	/* $(document).ready 생략 가능 $만 주면 */
+	$(function() {
+		$('*').css('color', 'red');
+		/* FM명령어 */
+		jQuery('p').css('color','green');
+	})
+</script>
+</head>
+<body>
+	<h1>비가 오려나</h1>
+	<p>태풍아 </p>
+	<div>천둥이 되라</div>
+</body>
+</html>

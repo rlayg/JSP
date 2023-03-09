@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- CDN 방식 -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		/* .item은 class가 아이템이라는거 */ 
+		$('.item').css('color', 'orange');
+		$('h1.item').css('background', 'red');
+	});
+
+</script>
+</head>
+<body>
+	<h1 class="item">Header-0</h1>
+	<h1 class="item select">Header-1</h1>
+	<h1 class="unSelect">Header-unSelect</h1>
+	<h1 class="item">Header-2</h1>
+</body>
+</html>
