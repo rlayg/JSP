@@ -23,7 +23,7 @@
 	MultipartRequest multi = new MultipartRequest(request, realPath, maxSize, "utf-8", new DefaultFileRenamePolicy());
 	
 	Enumeration en = multi.getFileNames();
-	while (en.hasMoreElements()){
+	while (en.hasMoreElements()){ //향상형 for문처럼 생각해, 파일 하나 올려도 while문으로 해 나중에 2개 올리게 되도 쉽게 할 수 있어
 		//input 태그의 속성이 file인 태그의 name 속성값: 파라미터이름
 		String parameterName = (String) en.nextElement();
 		//서버에 저장된 파일 이름

@@ -40,6 +40,7 @@ public class UpLoadBoard3 extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
+	//Post니까 Post에 해줘야해
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("UploadBoard3 doPost Start...");
 		String serverSaveFilename = "";
