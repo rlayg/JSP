@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html> 
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
@@ -26,7 +26,7 @@
 </script>
 </head>
 <body>
-	<h1>회원가입</h1>
+	<h1>회원가입</h1> <!-- 깃들어가라 -->
 	<form action="">
 		아이디 : <input type="text"		name="id"	id="id"	value=""><p>
 		암호	 : <input type="password"   name="pass"	id="pass"><p>
