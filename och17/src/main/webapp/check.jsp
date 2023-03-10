@@ -19,6 +19,6 @@
 	}
 	
 %>
-<a href = "sub2/winner.jsp">당첨자 보기</a>
+<a href = "sub2/winner.jsp">당첨자 보기</a> <!-- 2순위, 1순위는 LoginCheck의 필터 -->
 </body>
 </html>
