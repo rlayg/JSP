@@ -18,6 +18,8 @@
 	// id 존재 --> return1
 	// id 존재X -> return0
 	
+	
+	
 	int result = memberDao.confirm(id);
 	if(result == 0){
 		out.println("사용할 수 있는 ID입니다");
