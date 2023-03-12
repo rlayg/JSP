@@ -18,12 +18,25 @@ public class MemberDao {
 	private static MemberDao instance; //static 해야함 싱글톤
 	//Default
 	private MemberDao() {
+	// 생성자를 private으로 선언하여 외부에서 객체 생성을 막음
 	}
 	public static MemberDao getInstance() {
 		if(instance == null) {
 			instance = new MemberDao();
 		}
 		return instance;
+	/*  
+ 	public static MemberDao getInstance() ->>
+	getInstance() 메서드는 Singleton 패턴을 구현하기 위한 메서드로, 
+	클래스 레벨에서 한 번만 인스턴스를 생성하고, 생성된 인스턴스를 반환합니다.
+
+	instance 변수가 null인 경우에만 인스턴스를 생성합니다. 
+	따라서, 처음 호출될 때는 instance 변수가 null이므로 인스턴스를 생성하고, 
+	이후에는 instance 변수에 저장된 인스턴스를 반환합니다.
+	
+	이렇게 함으로써, 여러 개의 인스턴스가 생성되는 것을 방지하고, 
+	하나의 인스턴스만 사용하여 리소스를 절약할 수 있습니다.
+	*/	
 	}
 	//DBCP
 	private Connection getConnection() throws SQLException{
