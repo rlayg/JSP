@@ -9,7 +9,7 @@
 </head>
 <body>
 <%
-	//Service?역할 하는애
+	//Service 역할 하는애 (서버 아니고 서비스 맞아)
 	String id = request.getParameter("id");
 	//DAO 호출 -> Singleton D/P 디자인패턴
 	MemberDao memberDao = MemberDao.getInstance(); // 이게 싱글톤이래

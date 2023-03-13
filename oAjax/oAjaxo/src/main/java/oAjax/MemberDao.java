@@ -12,9 +12,9 @@ import javax.sql.DataSource;
 
 import com.mysql.cj.protocol.Resultset;
 
-//Singleton + DBCP
+//Singleton + DBCP --> 가장 이상적
 public class MemberDao {
-	//Singleton --> Resource 절감
+	//Singleton --> Resource 절감  GOF의 디자인패턴중 가장 중요하고 기본
 	private static MemberDao instance; //static 해야함 싱글톤
 	//Default
 	private MemberDao() {
@@ -84,9 +84,46 @@ public class MemberDao {
 				conn.close();
 			}
 		}
-		
-		
-		
 		return result;
 	}
+	/*
+	 선생님 답 
+	 
+	public int confirm(String id) throws SQLException {
+		int result = 1;
+		
+		Connection conn = null;
+		String sql = "select * from member1 where id = ?"; 
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		try {
+			conn = getConnection();
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setString(1, id);
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				result = 1;
+			} else{
+			result = 0;
+			}
+						
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		} finally {
+			if(rs != null) {
+				rs.close();
+			}
+			if(pstmt != null) {
+				pstmt.close();
+			}
+			if(conn != null) {
+				conn.close();
+			}
+		}
+		return result;
+	}
+	*/
+	
 }

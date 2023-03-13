@@ -18,10 +18,18 @@
 			$.ajax({
 				url		: 'confirmId.jsp',
 				dataType: 'text',
-				data	: sendData,
+				data	: sendData,   //이게 파라미터 / 객체는 Json, 문장은 text
 				success	: function(data1) {
 					$('#msg').html(data1);
 				}
+			
+			/* 
+			success는 이거야 -> if(httpRequest.readyState==4) 
+								if(httpRequest.status==200)
+									
+			dataType은 주로 text or Json or html / 주로 text or Json
+			 */
+			 
 			});
 		});
 	});
