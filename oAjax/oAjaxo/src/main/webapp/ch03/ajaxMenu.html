@@ -26,6 +26,10 @@
 				success		: function(data) {
 							$('#msg2').html($(data).find('li'));
 							}
+			/* 
+			success는 이거야 -> if(httpRequest.readyState==4) 
+								if(httpRequest.status==200)
+			 */
 			});
 		});
 	});
