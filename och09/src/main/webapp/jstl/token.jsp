@@ -14,5 +14,6 @@
 	<c:forTokens var="animal" items="${animals }" delims="*">
 		${animal }<br>
 	</c:forTokens>
+	
 </body>
 </html>
